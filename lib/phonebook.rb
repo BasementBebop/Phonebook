@@ -18,3 +18,14 @@ class Contact
   end
 
 end
+
+class Phone
+  attr_reader(:number)
+  @@all_numbers = []
+
+  define_method(:initialize) do |attributes|
+    @number = number
+    @@all_numbers.push(self)
+  end
+
+end
