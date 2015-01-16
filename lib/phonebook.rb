@@ -1,10 +1,9 @@
 class Contact
-  attr_reader(:name, :primary_number, :info)
+  attr_reader(:name, :info)
   @@all = []
 
   define_method(:initialize) do |attributes|
     @name = attributes[:name]
-    @primary_number = attributes[:primary_number]
     @info = attributes[:info]
     @@all.push(self)
   end
@@ -20,11 +19,12 @@ class Contact
 end
 
 class Phone
-  attr_reader(:number, )
+  attr_reader(:number, :type)
   @@all_numbers = []
 
   define_method(:initialize) do |attributes|
-    @number = number
+    @number = attributes[:number]
+    @type = attributes[:type]
     @@all_numbers.push(self)
   end
 

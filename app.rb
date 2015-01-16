@@ -10,11 +10,12 @@ end
 
 post('/contact_add') do
   @name = params['name']
-  @primary_number = params['primary_number']
   @info = params['info']
-  Contact.new({:name => @name, :primary_number => Phone.new(@primary_number), :info => @info })
+  Contact.new({:name => @name, :info => @info })
   redirect('/home')
 end
+
+
 
 post('/clear_contacts') do
   Contact.clear()
