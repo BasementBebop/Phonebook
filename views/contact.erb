@@ -1,0 +1,9 @@
+<h1><%= @contact_info.name() %></h1>
+<h1><%= @phone_info %>  <%= @phone_info%></h1>
+
+<h3> Add number: </h3>
+<form id="number_add" action="number_add" method="post">
+  <input id="number" type="text" name="number" class="form-control" placeholder="Number">
+  <input id="type" type="text" name="type" class="form-control" placeholder="Number type eg Cell">
+  <button type="submit" name="button" class="btn btn-primary">Save</button>
+</form>
