@@ -8,5 +8,13 @@ class Contact
     @info = attributes[:info]
     @@all.push(self)
   end
-  
+
+  define_singleton_method(:all) do
+    @@all
+  end
+
+  define_singleton_method(:clear) do
+    @@all = []
+  end
+
 end
