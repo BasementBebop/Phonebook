@@ -13,8 +13,8 @@
 </form>
 <h2>Contact list:</h2>
 
-<ol>
+<ul>
   <% @list.each() do |contact| %>
-  <li>Name: <%= contact.name() %> Primary Number: <%= contact.primary_number() %> Contact Notes: <%= contact.info() %> </li>
+  <li><a href="contact/"> <%= contact.name() %></a></li>
   <% end %>
-</ol>
+</ul>
