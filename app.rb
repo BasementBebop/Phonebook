@@ -23,7 +23,6 @@ end
 get('/contact/:id') do
   @id = params["id"]
   @contact_info = Contact.search_with_id(@id)
-  @save = @contact_info
   #@phone_info = Phone.search_number_id(@id)
 erb(:contact)
 end
@@ -31,7 +30,7 @@ end
 post('/contact/number_add') do
   @number = params['number']
   @type = params['type']
-  @contact = @save.name()
+  @contact = @contact_info.name()
   Phone.new({:number => @number, :type => @type, :contact => @contact})
   redirect('/home')
 end
